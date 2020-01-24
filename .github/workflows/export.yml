@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Export PDF
-        uses: docker://marpteam:marp-cli@v0.17.0
+        uses: docker://marpteam/marp-cli@66f1d60c022b
         with:
           LANG: ja
           args: "-v $PWD:/home/marp/app/ -e LANG=$LANG *.md --pdf"
