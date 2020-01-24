@@ -17,5 +17,6 @@ jobs:
         with:
           LANG: ja
           args: "*.md --pdf"
-        volumes:
-          - $PWD:/home/marp/app/
+        container:
+          volumes:
+            - $PWD:/home/marp/app/
