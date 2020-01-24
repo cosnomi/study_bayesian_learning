@@ -1,0 +1,21 @@
+name: Deploy
+on:
+  push:
+    branches:
+      # - "master"
+
+jobs:
+  export:
+    name: export
+    runs-on: ubuntu-latest
+    container:
+      image: marpteam/marp-cli
+    steps:
+      - uses: actions/checkout@v1
+      - name: Export PDF
+        uses: docker://marpteam:marp-cli@v0.17.0
+        with:
+          LANG: ja
+          args: *.md --pdf
+        volumes:
+          - $PWD:/home/marp/app/
