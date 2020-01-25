@@ -16,7 +16,7 @@ jobs:
         uses: docker://marpteam/marp-cli:v0.17.0
         with:
           LANG: ja
-          args: "-v $PWD:/home/marp/app/ -e LANG=$LANG"
+          args: "--entrypoint 'cd /github/workspace && node /home/marp/.cli/marp-cli.js -e LANG=$LANG'"
       - name: Move artifacts
         run: |
           ls -a
