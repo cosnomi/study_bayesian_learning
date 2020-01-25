@@ -9,6 +9,13 @@ RUN apk --no-cache add ca-certificates wget && \
     wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.25-r0/glibc-i18n-2.25-r0.apk && \
     apk add glibc-bin-2.25-r0.apk glibc-i18n-2.25-r0.apk glibc-2.25-r0.apk
 
+RUN apk update \
+  && apk add --no-cache curl fontconfig \
+  && curl -O https://noto-website.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip \
+  && mkdir -p /usr/share/fonts/NotoSansCJKjp \
+  && unzip NotoSansCJKjp-hinted.zip -d /usr/share/fonts/NotoSansCJKjp/ \
+  && rm NotoSansCJKjp-hinted.zip \
+  && fc-cache -fv
 
 RUN /usr/glibc-compat/bin/localedef -i ja_JP -f UTF-8 ja_JP.UTF-8
 
