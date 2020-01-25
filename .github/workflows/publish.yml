@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - name: Delete marprc
+        run: rm ./.marprc.yml
       - name: Make dir
         run: mkdir ./public
       - name: Change permission
