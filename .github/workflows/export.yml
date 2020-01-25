@@ -17,7 +17,7 @@ jobs:
       - name: Change permission
         run: chmod 777 -R ./pdfs
       - name: Export PDF
-        uses: ./.github/actions/export-pdf
+        uses: docker://marpteam/marp-cli:v0.17.0
         with:
           args: '-v "/usr/share/fonts/:/usr/share/fonts/" --workdir /github/workspace'
       - name: Move artifacts
