@@ -3,6 +3,19 @@ marp: true
 paginate: true
 theme: gaia
 style: |
+  @font-face {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: normal;
+    src: url("NotoSansCJKjp-Regular.otf");
+  }
+
+  @font-face {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: bold;
+    src: url("NotoSansCJKjp-Bold.otf");
+  }
   section {
     font-family: "Noto Sans JP",sans-serif;
   }
