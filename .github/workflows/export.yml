@@ -21,3 +21,28 @@ jobs:
         with:
           name: PDF
           path: pdfs
+      - name: Compress artifacts
+        run: |
+          zip -r pdf.zip pdfs
+      - name: Create Release
+        id: create_release
+        if: github.ref == 'refs/heads/master'
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ github.sha }}
+          release_name: ${{ github.sha }}
+          body: |
+            This is an automated release.
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        if: github.ref == 'refs/heads/master'
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: ./pdf.zip
+          asset_name: pdf.zip
+          asset_content_type: application/zip
