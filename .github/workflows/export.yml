@@ -20,7 +20,7 @@ jobs:
         uses: docker://marpteam/marp-cli:v0.17.0
         with:
           LANG: ja
-          args: "-u root -v /usr/share/fonts/:/usr/share/fonts/ --workdir /github/workspace -e LANG=$LANG"
+          args: "--workdir /github/workspace -e LANG=$LANG"
       - name: Move artifacts
         run: |
       - name: Archive production artifacts
