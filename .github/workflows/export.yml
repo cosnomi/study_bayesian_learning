@@ -14,7 +14,7 @@ jobs:
         uses: docker://marpteam/marp-cli:v0.17.0
         with:
           LANG: ja
-          args: "-v $PWD:/home/marp/app/ -e LANG=$LANG **/*.md --pdf"
+          args: "-v $PWD:/home/marp/app/ -e LANG=$LANG"
       - name: Move artifacts
         run: |
           ls -a
