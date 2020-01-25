@@ -1,0 +1,31 @@
+name: Publish GitHub pages
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  publish:
+    name: publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Delete marprc
+        run: rm ./.marprc.yml
+      - name: Copy resources
+        working-directory: slides
+        run: cp --parents ./**/*.png ./**/*.jpg ../public
+      - name: Change permission
+        run: chmod 777 -R ./public
+      - name: Generate HTML
+        uses: docker://marpteam/marp-cli:v0.17.0
+        with:
+          args: "--workdir /github/workspace --input-dir slides --output public --html --allow-local-files"
+      - name: Show ls
+        run: ls -la ./public
+      - name: GitHub pages
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./public

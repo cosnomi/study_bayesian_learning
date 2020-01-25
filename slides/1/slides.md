@@ -4,7 +4,7 @@ paginate: true
 theme: gaia
 style: |
   section {
-    font-family: 'Arial', 'MS Gothic';
+    font-family: "Noto Sans CJK JP",sans-serif;
   }
   section strong {
     border-bottom: 3px solid red;
@@ -318,7 +318,7 @@ $$\bm{Y} \approx \bm{W}^T\bm{X}$$
 
 どうやって$\bm{W}$を求めるの？
 
-- $\bm{Y}と\bm{W}^T\bm{X}$の誤差が最小になるようにとか
+- $\bm{Y}$と$\bm{W}^T\bm{X}$の誤差が最小になるようにとか
 - ベイズ的な方法とか
 - 詳しくは後の章で
 

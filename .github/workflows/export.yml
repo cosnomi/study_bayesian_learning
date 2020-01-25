@@ -1,0 +1,25 @@
+name: Export PDF
+on:
+  push:
+    branches:
+      # - "master"
+
+jobs:
+  export:
+    name: export
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Make dir
+        run: mkdir ./pdfs
+      - name: Change permission
+        run: chmod 777 -R ./pdfs
+      - name: Export PDF
+        uses: ./.github/actions/export-pdf
+        with:
+          args: "-c ./.marprc.yml"
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: PDF
+          path: pdfs

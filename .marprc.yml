@@ -1,0 +1,6 @@
+allowLocalFiles: true
+inputDir: "./slides"
+output: "./pdfs"
+pdf: true
+lang: ja_JP
+html: true
