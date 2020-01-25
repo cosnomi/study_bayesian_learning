@@ -1,0 +1,5 @@
+name: "Export PDF"
+description: "Export pdf of Marp"
+runs:
+  using: "docker"
+  image: "Dockerfile"

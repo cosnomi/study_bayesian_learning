@@ -15,13 +15,7 @@ jobs:
       - name: Change permission
         run: chmod 777 -R ./pdfs
       - name: Export PDF
-        uses: docker://marpteam/marp-cli:v0.17.0
-        with:
-          args: "--workdir /github/workspace -e LANG=ja_JP"
-        env:
-          LANG: "ja_JP.UTF-8"
-          LANGUAGE: "ja_JP:ja"
-          LC_ALL: "ja_JP.UTF-8"
+        uses: ./github/actions/export-pdf
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
