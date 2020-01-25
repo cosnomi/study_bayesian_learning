@@ -19,7 +19,7 @@ jobs:
       - name: Export PDF
         uses: docker://marpteam/marp-cli:v0.17.0
         with:
-          args: '-v "/usr/share/fonts/:/usr/share/fonts/" --workdir /github/workspace'
+          args: "--workdir /github/workspace"
       - name: Move artifacts
         run: |
       - name: Archive production artifacts
