@@ -22,7 +22,7 @@ jobs:
         with:
           args: "--workdir /github/workspace --input-dir slides --output public --html --allow-local-files"
       - name: Show ls
-        run: ls -la public
+        run: ls -la ./public
       - name: GitHub pages
         uses: peaceiris/actions-gh-pages@v2
         env:
