@@ -17,7 +17,7 @@ jobs:
       - name: Generate HTML
         uses: docker://marpteam/marp-cli:v0.17.0
         with:
-          args: "--workdir /github/workspace --input-dir slides --output public"
+          args: "--workdir /github/workspace --input-dir slides --output public --html --allow-local-files"
       - name: GitHub pages
         uses: peaceiris/actions-gh-pages@v2
         env:
