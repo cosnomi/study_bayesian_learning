@@ -10,7 +10,7 @@ RUN apk --no-cache add ca-certificates wget && \
     apk add glibc-bin-2.25-r0.apk glibc-i18n-2.25-r0.apk glibc-2.25-r0.apk
 
 
-RUN cat locale.md | xargs -i /usr/glibc-compat/bin/localedef -i ja_JP -f UTF-8 ja_JP.UTF-8
+RUN /usr/glibc-compat/bin/localedef -i ja_JP -f UTF-8 ja_JP.UTF-8
 
 ENV LANG=ja_JP.UTF-8 \
     LANGUAGE=ja_JP.UTF-8
