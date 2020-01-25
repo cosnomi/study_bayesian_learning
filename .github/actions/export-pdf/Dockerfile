@@ -12,6 +12,8 @@ RUN apk --no-cache add ca-certificates wget && \
 RUN apk add --no-cache curl fontconfig font-noto-cjk \
   && fc-cache -fv
 
+RUN fc-list
+
 RUN /usr/glibc-compat/bin/localedef -i ja_JP -f UTF-8 ja_JP.UTF-8
 
 ENV LANG=ja_JP.UTF-8 \
