@@ -19,7 +19,7 @@ jobs:
       - name: Export PDF
         uses: docker://marpteam/marp-cli:v0.17.0
         with:
-          args: "--workdir /github/workspace"
+          args: "--workdir /github/workspace -e LANG=ja_JP"
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
