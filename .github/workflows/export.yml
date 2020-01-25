@@ -15,7 +15,7 @@ jobs:
       - name: Change permission
         run: chmod 777 -R ./pdfs
       - name: Export PDF
-        uses: ./github/actions/export-pdf
+        uses: ./.github/actions/export-pdf
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
