@@ -19,7 +19,7 @@ jobs:
         with:
           # This is the default config path, but you need to put something here
           # in order to prevent default CMD `--help`
-          args: "-c ./.marprc.yml"
+          args: "-c /github/workspace/.marprc.yml"
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
