@@ -14,6 +14,8 @@ jobs:
         run: echo $PWD
       - name: Make dir
         run: mkdir ./pdfs
+      - name: Change permission
+        run: chmod 777 -R ./pdfs
       - name: Export PDF
         uses: docker://marpteam/marp-cli:v0.17.0
         with:
