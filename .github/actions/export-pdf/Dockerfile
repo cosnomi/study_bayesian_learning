@@ -15,7 +15,8 @@ RUN apk update \
   && mkdir -p /usr/share/fonts/NotoSansCJKjp \
   && unzip NotoSansCJKjp-hinted.zip -d /usr/share/fonts/NotoSansCJKjp/ \
   && rm NotoSansCJKjp-hinted.zip \
-  && fc-cache -fv
+  && fc-cache -fv \
+  && unifont
 
 RUN /usr/glibc-compat/bin/localedef -i ja_JP -f UTF-8 ja_JP.UTF-8
 
