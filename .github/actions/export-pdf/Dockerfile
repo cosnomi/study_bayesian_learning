@@ -25,7 +25,7 @@ RUN apk update \
   && mkdir -p /usr/share/fonts/NotoSansCJKjp \
   && unzip NotoSansCJKjp-hinted.zip -d /usr/share/fonts/NotoSansCJKjp/ \
   && rm NotoSansCJKjp-hinted.zip \
-  && fc-cache -fv \
+  && fc-cache -fv
 
 RUN addgroup -S marp && adduser -S -g marp marp \
     && mkdir -p /home/marp/app /home/marp/.cli \
