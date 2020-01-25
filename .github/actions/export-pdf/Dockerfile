@@ -20,4 +20,3 @@ ENV LANG=ja_JP.UTF-8 \
     LANGUAGE=ja_JP.UTF-8
 
 WORKDIR /github/workspace
-CMD ["-c ./.marprc.yml"]
