@@ -8,8 +8,6 @@ jobs:
   export:
     name: export
     runs-on: ubuntu-latest
-    container:
-      image: marpteam/marp-cli
     steps:
       - uses: actions/checkout@v1
       - name: Export PDF
