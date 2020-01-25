@@ -4,7 +4,7 @@ paginate: true
 theme: gaia
 style: |
   section {
-    font-family: "Noto Sans JP",sans-serif;
+    font-family: "Noto Sans CJK JP",sans-serif;
   }
   section strong {
     border-bottom: 3px solid red;
