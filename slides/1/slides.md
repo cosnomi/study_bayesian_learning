@@ -4,7 +4,7 @@ paginate: true
 theme: gaia
 style: |
   section {
-    font-family: 'Arial', 'MS Gothic';
+    font-family: 'Arial', 'MS Gothic', "メイリオ", sans-serif;
   }
   section strong {
     border-bottom: 3px solid red;
