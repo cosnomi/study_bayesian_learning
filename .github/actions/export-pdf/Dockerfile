@@ -19,4 +19,4 @@ RUN /usr/glibc-compat/bin/localedef -i ja_JP -f UTF-8 ja_JP.UTF-8
 ENV LANG=ja_JP.UTF-8 \
     LANGUAGE=ja_JP.UTF-8
 
-USER marp
+WORKDIR /github/workspace
