@@ -19,8 +19,7 @@ jobs:
       - name: Export PDF
         uses: ./.github/actions/export-pdf
         with:
-          LANG: ja
-          args: '-v "/usr/share/fonts/:/usr/share/fonts/" --workdir /github/workspace -e LANG=$LANG'
+          args: '-v "/usr/share/fonts/:/usr/share/fonts/" --workdir /github/workspace'
       - name: Move artifacts
         run: |
       - name: Archive production artifacts
