@@ -17,6 +17,8 @@ jobs:
           args: "-v $PWD:/home/marp/app/ -e LANG=$LANG **/*.md --pdf"
       - name: Move artifacts
         run: |
+          ls -a
+          ls -a ./1
           mkdir pdfs
           mv ./**/*.pdf ./pdfs
       - name: Archive production artifacts
