@@ -13,7 +13,7 @@ jobs:
       - name: Delete marprc
         run: rm ./.marprc.yml
       - name: Copy resources
-        workdir: slides
+        working-directory: slides
         run: cp --parents ./**/*.png ./**/*.jpg ../public
       - name: Change permission
         run: chmod 777 -R ./public
