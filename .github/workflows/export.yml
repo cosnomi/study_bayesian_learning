@@ -17,7 +17,7 @@ jobs:
       - name: Change permission
         run: chmod 777 -R ./pdfs
       - name: Export PDF
-        uses: docker://marpteam/marp-cli:v0.17.0
+        uses: ./.github/actions/export-pdf
         with:
           LANG: ja
           args: '-v "/usr/share/fonts/:/usr/share/fonts/" --workdir /github/workspace -e LANG=$LANG'
