@@ -4,3 +4,4 @@ output: "./pdfs"
 pdf: true
 lang: ja_JP
 html: true
+theme: "./theme.css"
