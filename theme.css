@@ -36,6 +36,15 @@ section.outline strong {
 section.outline strong::after {
   content: "← HERE";
 }
+section span.definition::before {
+  content: "def.";
+  color: white;
+  background-color: blue;
+  border-radius: 3px;
+  padding: 5px;
+  margin-right: 1rem;
+}
+
 img[alt~="center"] {
   display: block;
   margin: 0 auto;
