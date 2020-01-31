@@ -103,7 +103,9 @@ style: |
 ## 条件付き期待値
 
 - $\langle\bm{x}\bm{y}^T\rangle_{p(\bm{x}, \bm{y})}$を考えたい
-- 独立なら単に分解できて、$\langle\bm{x}\rangle_{p(\bm{x})} \langle\bm{y}^T\rangle_{p(\bm{y})}$
+
+* 独立なら単に分解できて、$\langle\bm{x}\rangle_{p(\bm{x})} \langle\bm{y}^T\rangle_{p(\bm{y})}$
+
 - 独立でないとき $\langle\bm{x}\bm{y}^T\rangle_{p(\bm{x}, \bm{y})} = \langle\langle\bm{x}\rangle_{p(\bm{x}|\bm{y})}\bm{y}^T\rangle_{p(\bm{y})}$
   - 見た目は怖いけど、よく考えると妥当に見える
   - $\bm{x}$と$\bm{y}$の間には関係がある(← 独立でない)から、外側の<>で$\bm{y}$を仮定してるのなら、単に$p(\bm{x})$ではなく$p(\bm{x}|\bm{y})$を考えてあげないといけない
