@@ -81,9 +81,10 @@ style: |
   - つまり $\langle \bm{x} \rangle_{p(\bm{x})}$
 - 期待値の定義より
   $$ \langle \bm{x} \rangle _{p(\bm{x})} = \int \bm{x} p(\bm{x}) dx $$
-- 確かに平均っぽい
 
-- <strong>2 乗の平均</strong>に相当する値: $\langle \bm{x}\bm{x}^T\rangle_{p(\bm{x})}$
+* 確かに平均っぽい
+
+* <strong>2 乗の平均</strong>に相当する値: $\langle \bm{x}\bm{x}^T\rangle_{p(\bm{x})}$
   - スカラーで考えると、$\langle x^2 \rangle_{p(\bm{x})}$
 
 ---
@@ -106,7 +107,7 @@ style: |
 - 独立でないとき $\langle\bm{x}\bm{y}^T\rangle_{p(\bm{x}, \bm{y})} = \langle\langle\bm{x}\rangle_{p(\bm{x}|\bm{y})}\bm{y}^T\rangle_{p(\bm{y})}$
   - 見た目は怖いけど、よく考えると妥当に見える
   - $\bm{x}$と$\bm{y}$の間には関係がある(← 独立でない)から、外側の<>で$\bm{y}$を仮定してるのなら、単に$p(\bm{x})$ではなく$p(\bm{x}|\bm{y})$を考えてあげないといけない
-  - $\langle\bm{x}\rangle_{p(\bm{x}|\bm{y})}$を**条件付き期待値**という
+  * $\langle\bm{x}\rangle_{p(\bm{x}|\bm{y})}$を**条件付き期待値**という
 
 ---
 
