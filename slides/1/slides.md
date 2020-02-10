@@ -1,46 +1,7 @@
 ---
 marp: true
 paginate: true
-theme: gaia
-style: |
-  section {
-    font-family: "Noto Sans CJK JP",sans-serif;
-  }
-  section strong {
-    border-bottom: 3px solid red;
-    font-weight: 800;
-  }
-  section.!first > h1{
-    font-size: 15px;
-  }
-  section.first {
-    text-align:center;
-  }
-  section.first > h1 {
-    font-size: 60px;
-  }
-  section.first > h3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto 0;
-    bottom: 100px;
-    font-size: 40px;
-  }
-  section.outline {
-    background-color: #ddddff;
-  }
-  section.outline strong {
-    color: red;
-    border: 0px;
-  }
-  section.outline strong::after {
-    content: "← HERE";
-  }
-  img[alt~="center"] {
-    display: block;
-    margin: 0 auto;
-  }
+theme: gaia-ex
 ---
 
 <!-- _class: first -->

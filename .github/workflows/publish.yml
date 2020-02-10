@@ -20,7 +20,7 @@ jobs:
       - name: Generate HTML
         uses: docker://marpteam/marp-cli:v0.17.0
         with:
-          args: "--workdir /github/workspace --input-dir slides --output public --html --allow-local-files"
+          args: "--workdir /github/workspace --input-dir slides --output public --html --allow-local-files --theme ./theme.css"
       - name: Show ls
         run: ls -la ./public
       - name: GitHub pages
