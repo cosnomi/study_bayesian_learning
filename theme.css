@@ -3,7 +3,7 @@
 @import "gaia";
 
 section {
-  font-family: "Noto Sans CJK JP", sans-serif;
+  font-family: "Noto Sans CJK JP", "游ゴシック", sans-serif;
 }
 section strong {
   border-bottom: 3px solid red;
