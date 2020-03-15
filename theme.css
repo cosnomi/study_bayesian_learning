@@ -75,3 +75,16 @@ img[alt~="center"] {
   display: block;
   margin: 0 auto;
 }
+
+img[alt~="br"] {
+  display: block;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+}
+img[alt~="tr"] {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
